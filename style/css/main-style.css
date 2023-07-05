@@ -1,0 +1,163 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+  }
+  
+  h1 {
+    color: #333;
+  }
+  
+  #todo-container {
+    margin: 20px 0;
+    display: grid;
+    place-items: center;
+  }
+  
+  #add-button {
+    border: none;
+    background-color: transparent;
+  }
+  
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background: rgba(0, 0, 0, 0.11);
+    backdrop-filter: blur(5px)
+  }
+  
+  .modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    width: 300px;
+    border: none;
+    border-radius: 32px;
+    
+  }
+  
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  #topic-select {
+    padding: 5px;
+    margin-bottom: 10px;
+  }
+  
+  #add-todo-button {
+    padding: 5px 10px;
+  }
+  
+  #todo-list {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .todo-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 5px;
+  }
+  
+  .topic-planos {
+    background-color: #B7F7D8;
+  }
+  
+  .topic-trabalho {
+    background-color: #F7B7B7;
+  }
+  
+  .topic-afazeres {
+    background-color: #F7F0B7;
+  }
+
+
+
+  @media only screen and (max-width: 420px) {
+    #add-button{ 
+        position: absolute;
+        bottom: 5.2rem;
+    }
+
+    #todo-container {
+        margin: 20px 0;
+        display: grid;
+        place-items: center;
+      }
+
+      .modal-content {
+        display: grid;
+        gap: 1rem;
+        background-color: #fefefe;
+        margin: 15% auto;
+        padding: 20px;
+        width: 300px;
+        height: 60%;
+        padding: 3rem auto;
+      }
+    
+      .title-modal{ 
+        font-size: 30px;
+        margin-left: 1.5rem;
+        font-weight: 400;
+        text-align: left;
+        height: inherit;
+      }
+
+      .select-section{ 
+        width: auto ;
+        overflow: hidden;
+      }
+
+      .select-section select {
+        background: url(/assets/img/add-main-icon.png) no-repeat transparent;
+        
+        /* Imagem de fundo (Seta) */
+        background-position: 205px center;
+        /*Posição da imagem do background*/
+        width: 270px;
+        /* Tamanho do select, maior que o tamanho da div "div-select" */
+        height: 80px;
+        /* altura do select, importante para que tenha a mesma altura em todo os navegadores */
+        font-family: Arial, Helvetica, sans-serif;
+        /* Fonte do Select */
+        font-size: 18px;
+        /* Tamanho da Fonte */
+        padding: 13px 20px 13px 12px;
+        /* Configurações de padding para posicionar o texto no campo */
+        color: #000000;
+        /* Cor da Fonte */
+        text-indent: 0.01px;
+        /* Remove seta padrão do FireFox */
+        text-overflow: "";
+    }
+    
+    /* Remove seta padrão do FireFox */
+    .select-section select::-ms-expand {
+        display: none;
+    }
+    /* Remove seta padrão do IE*/
+
+}
+  
+
