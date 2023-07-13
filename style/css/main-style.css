@@ -1,6 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800&display=swap');
+
 body {
-    font-family: Arial, sans-serif;
+  font-family: 'Clash Display', sans-serif;
     text-align: center;
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
+  }
+  
+  
+
+  .main{ 
+    display: grid;
+    place-items: center;
+    width: 100%;
+    height: 100%;
+    
+  }
+
+  .header{ 
+    width: 100%;
+    height: auto;
+    top: 0;
   }
   
   h1 {
@@ -14,12 +34,16 @@ body {
   }
   
   #add-button {
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
     border: none;
     background-color: transparent;
   }
   
   .modal {
-    display: none;
+    display: grid;
+    place-items: center;
     position: fixed;
     z-index: 1;
     left: 0;
@@ -28,17 +52,17 @@ body {
     height: 100%;
     overflow: auto;
     background: rgba(0, 0, 0, 0.11);
-    backdrop-filter: blur(5px)
+    backdrop-filter: blur(5px);
   }
+
+  
   
   .modal-content {
     background-color: #fefefe;
-    margin: 15% auto;
-    padding: 20px;
+    padding: 60px;
     width: 300px;
     border: none;
-    border-radius: 32px;
-    
+    border-radius: 32px;    
   }
   
   .close {
@@ -51,28 +75,50 @@ body {
   
   .close:hover,
   .close:focus {
+    transition: 500ms;
     color: #000;
     text-decoration: none;
     cursor: pointer;
   }
   
-  #topic-select {
-    padding: 5px;
-    margin-bottom: 10px;
-  }
   
   #add-todo-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6.5rem;
     padding: 5px 10px;
+    height: 5.23556rem;
+    border-radius:1.25rem;
+    border: 1px solid #000;
+    background-color: #000;
+    color: #fff;
+    font-family: 'Clash Display', sans-serif;
+    font-size: 1.2rem;
+    cursor: pointer;
+
   }
   
+
   #todo-list {
     list-style-type: none;
     padding: 0;
   }
+
+  #todo-input{
+    font-family: 'Clash Display', sans-serif; 
+    padding: 1.5rem 1rem ;
+    border-radius: 1.25rem ;
+    border: 1px #000 solid;
+  }
+
+  #todo-input:focus{ 
+    outline: 0;
+    border: 1px solid #000;
+  }
   
   .todo-item {
     display: flex;
-    justify-content: space-between;
     align-items: center;
     padding: 10px;
     margin: 5px;
@@ -91,13 +137,128 @@ body {
     background-color: #F7F0B7;
   }
 
+  .select-section{ 
+    font-family: '';
+    display: grid;
+    place-items: center;
+    width: auto ;
+    overflow: hidden;
+    border-radius: 1.25rem;
+    border: 1px solid #000;
+    background-color: transparent;
+    font-family: 'Clash Display', sans-serif;
+
+  }
+
+  #topic-select{
+    font-family: 'Clash Display', sans-serif;
+    font-weight: 500;
+    border: none;
+    outline: none;
+    -webkit-appearance: none; /* Remover a aparência padrão */
+    -moz-appearance: none;
+    transition: 500ms;
+
+  }
+
+  option:hover{ 
+    background-color: transparent;
+  }
+
+  .select-section select {
+    background: url(/assets/img/Arrow\ 2.png) no-repeat transparent;
+    background-size: auto;
+    
+    /* Imagem de fundo (Seta) */
+    background-position: 90% center;
+    /*Posição da imagem do background*/
+    width: 270px;
+    /* Tamanho do select, maior que o tamanho da div "div-select" */
+    height: 70px;
+    /* altura do select, importante para que tenha a mesma altura em todo os navegadores */
+    /* Fonte do Select */
+    font-size: 18px;
+    /* Tamanho da Fonte */
+    padding: 13px 20px 13px 1rem;
+    /* Configurações de padding para posicionar o texto no campo */
+    color: #000000;
+    /* Cor da Fonte */
+    /* Remove seta padrão do FireFox */
+    text-overflow: "";
+}
+
+/* Remove seta padrão do FireFox */
+.select-section select::-ms-expand {
+    display: none;
+}
+/* Remove seta padrão do IE*/
+
+.modal-content {
+  display: grid;
+  gap: 1rem;
+} 
+
+.title-modal{ 
+  font-size: 30px;
+  margin-left: 1.5rem;
+  font-weight: 400;
+  text-align: left;
+  height: inherit;
+}
+
+
+.todo-item{ 
+  display: grid;
+  gap: 2rem;
+  margin: 1rem 15rem;
+  margin-bottom: 2rem;
+  padding: 5rem;
+  text-align: start;
+  font-size: 20px;
+  font-weight: 400;
+  border: 1px solid rgba(0, 0, 0, 0.22);
+  border-radius: 2.4375rem;
+  flex-shrink: 0;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.topic-container {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #f2f2f2;
+  border-radius: 5px;
+}
+
+
+
+.delete-button {
+  gap: 6.5rem;
+  width: 8rem;
+  height: 3rem;
+  border-radius: 1.25rem ;
+  border: none;
+  display: grid;
+  place-items: center;
+  background-color: #0000004a;
+  color: #ffffff;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 1s;
+}
+
+.delete-button:hover {
+
+  background-color: #0000007f;
+
+}
+
+
+
+
 
 
   @media only screen and (max-width: 420px) {
-    #add-button{ 
-        position: absolute;
-        bottom: 5.2rem;
-    }
 
     #todo-container {
         margin: 20px 0;
@@ -124,16 +285,16 @@ body {
         height: inherit;
       }
 
-      .select-section{ 
-        width: auto ;
-        overflow: hidden;
-      }
 
+
+      #topic-select:focus{ 
+     
+      }
       .select-section select {
         background: url(/assets/img/add-main-icon.png) no-repeat transparent;
         
         /* Imagem de fundo (Seta) */
-        background-position: 205px center;
+        background-position: 90% center;
         /*Posição da imagem do background*/
         width: 270px;
         /* Tamanho do select, maior que o tamanho da div "div-select" */
@@ -142,8 +303,7 @@ body {
         font-family: Arial, Helvetica, sans-serif;
         /* Fonte do Select */
         font-size: 18px;
-        /* Tamanho da Fonte */
-        padding: 13px 20px 13px 12px;
+        /* Tamanho da Fonte *
         /* Configurações de padding para posicionar o texto no campo */
         color: #000000;
         /* Cor da Fonte */
@@ -157,6 +317,13 @@ body {
         display: none;
     }
     /* Remove seta padrão do IE*/
+
+
+    .todo-item {
+     margin: 3rem 1rem;
+      padding: 3rem;
+
+  }
 
 }
   

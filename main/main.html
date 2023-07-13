@@ -9,9 +9,15 @@
       rel="stylesheet">
 </head>
 <body>
+  <div class="header">
+    <a href="index.html">
     <img class="todo-icon" src="/assets/img/To do.png" width="70px" alt="" style="margin-top: 3rem;">
+  </a>
   <div id="todo-container">
     <button id="add-button"><img src="/assets/img/add-main-icon.png"" alt=""></button>
+  </div>
+</div>
+    <main class="main">
     <div id="topic-modal" class="modal">
       <div class="modal-content">
         <span class="close">&times;</span>
@@ -24,10 +30,11 @@
         </select>
     </div>
         <input type="text" id="todo-input" placeholder="Digite uma tarefa">
-        <button id="add-todo-button"></button>
+        <button id="add-todo-button">Adicionar <img src="/assets/img/add-icon.png" alt=""></button>
       </div>
     </div>
-  </div>
+  </main>
+
   
   <ul id="todo-list"></ul>
   
