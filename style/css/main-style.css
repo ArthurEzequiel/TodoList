@@ -168,7 +168,7 @@ body {
 
 
   .select-section select {
-    background: url(/assets/img/Arrow\ 2.png) no-repeat transparent;
+    background: url(img/Arrow\ 2.png) no-repeat transparent;
     background-size: auto;
     
     /* Imagem de fundo (Seta) */
