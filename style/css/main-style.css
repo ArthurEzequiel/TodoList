@@ -166,6 +166,7 @@ body {
     background-color: transparent;
   }
 
+
   .select-section select {
     background: url(/assets/img/Arrow\ 2.png) no-repeat transparent;
     background-size: auto;
@@ -173,18 +174,17 @@ body {
     /* Imagem de fundo (Seta) */
     background-position: 90% center;
     /*Posição da imagem do background*/
-    width: 270px;
+    width: 100%;
     /* Tamanho do select, maior que o tamanho da div "div-select" */
     height: 70px;
     /* altura do select, importante para que tenha a mesma altura em todo os navegadores */
     /* Fonte do Select */
     font-size: 18px;
     /* Tamanho da Fonte */
-    padding: 13px 20px 13px 1rem;
+    padding: 13px 3rem 13px 2rem;
     /* Configurações de padding para posicionar o texto no campo */
     color: #000000;
     /* Cor da Fonte */
-    /* Remove seta padrão do FireFox */
     text-overflow: "";
 }
 
@@ -258,6 +258,10 @@ body {
   background-color: transparent;
 }
 
+
+.option-select{ 
+  width: 500px;
+}
 
 
 
