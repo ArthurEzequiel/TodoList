@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
 <head>
   <title>Dashboard | ToDoList!</title>
   <link rel="stylesheet" type="text/css" href="/style/css/main-style.css">
@@ -24,9 +24,9 @@
         <p class="title-modal">Selecione o <br><strong>tópico</strong></p>
         <div class="select-section">
         <select id="topic-select">
-          <option value="planos">Planos</option>
-          <option value="trabalho">Trabalho</option>
-          <option value="afazeres">A Fazeres</option>
+          <option class="option-select" value="planos">Planos</option>
+          <option class="option-select" value="trabalho">Trabalho</option>
+          <option class="option-select" value="afazeres">A Fazeres</option>
         </select>
     </div>
         <input type="text" id="todo-input" placeholder="Digite uma tarefa">
@@ -39,5 +39,6 @@
   <ul id="todo-list"></ul>
   
   <script src="/main/script/index.js"></script>
+  <script src="/main/script/query.js"></script>
 </body>
 </html>
