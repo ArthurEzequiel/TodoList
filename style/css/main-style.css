@@ -168,7 +168,7 @@ body {
 
 
   .select-section select {
-    background: url(/assets/img/Arrow\ 2.png) no-repeat transparent;
+    background: url(assets/img/Arrow\ 2.png) no-repeat transparent;
     background-size: auto;
     
     /* Imagem de fundo (Seta) */
@@ -299,7 +299,7 @@ body {
      
       }
       .select-section select {
-        background: url(/assets/img/add-main-icon.png) no-repeat transparent;
+        background: url(assets/img/add-main-icon.png) no-repeat transparent;
         
         /* Imagem de fundo (Seta) */
         background-position: 90% center;
@@ -354,18 +354,6 @@ body {
 
 }
   
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 .nice-select {
