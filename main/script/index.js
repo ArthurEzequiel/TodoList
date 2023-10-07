@@ -67,30 +67,32 @@ function saveTodos() {
 // Função para renderizar as listas na tela
 function renderTodos() {
   todoList.innerHTML = "";
-
   todos.forEach((todo, index) => {
-    const todoItem = document.createElement("li");
-    todoItem.className = "todo-item topic-" + todo.topic;
 
     
+    const todoItem = document.createElement("li");
+    todoItem.className = "todo-item topic-" + todo.topic;
     const deleteButton = document.createElement("button");
     deleteButton.textContent = "Apagar";
     deleteButton.className = "delete-button";
-
+    
+    const topicColorDiv = document.createElement("div");
+    topicColorDiv.className = "topic-color-" + todo.topic;
+    todoItem.appendChild(topicColorDiv);  
     const todoTitle = document.createElement("h2");
     todoTitle.textContent = todo.topic;
     todoItem.appendChild(todoTitle);
-
     const todoTextSpan = document.createElement("span");
     todoTextSpan.textContent = todo.text;
 
+    // Adicionando a div com classe "topic-color-" dentro de todoItem
+   
 
     deleteButton.addEventListener("click", function () {
       todos.splice(index, 1);
       saveTodos();
       renderTodos();
     });
-
     todoItem.appendChild(todoTextSpan);
     todoItem.appendChild(deleteButton);
     todoList.appendChild(todoItem);

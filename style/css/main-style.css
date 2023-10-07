@@ -36,8 +36,15 @@ body {
   #add-button {
     cursor: pointer;
     position: relative;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 1rem;
+    font-weight: 500;
     z-index: 1;
+    color: rgba(0, 0, 0, 0.55);
     border: none;
+    font-family: Montserrat;
     background-color: transparent;
   }
   
@@ -101,6 +108,8 @@ body {
   
 
   #todo-list {
+    display: grid;
+    place-items: center;
     list-style-type: none;
     padding: 0;
   }
@@ -120,21 +129,35 @@ body {
   .todo-item {
     display: flex;
     align-items: center;
+    
     padding: 10px;
     margin: 5px;
     border-radius: 5px;
   }
   
-  .topic-planos {
+  .topic-color-Planos {
     background-color: #B7F7D8;
+    height: 1rem;
+    width: 100%;
+    border-radius: 18px;
   }
   
-  .topic-trabalho {
+  .topic-color-Trabalho {
     background-color: #F7B7B7;
+    height: 1rem;
+    width: 100%;
+    border-radius: 18px;
   }
   
-  .topic-afazeres {
+  .topic-color-Fazeres {
     background-color: #F7F0B7;
+    height: 1rem;
+    width: 100%;
+    border-radius: 18px;
+  }
+
+  .todo-container-inner{ 
+    width: 60%; display: grid; place-items: start;
   }
 
   .select-section{ 
@@ -215,12 +238,14 @@ body {
   margin-bottom: 2rem;
   padding: 5rem;
   text-align: start;
-  font-size: 20px;
+  /* font-size: 20px; */
   font-weight: 400;
   border: 1px solid rgba(0, 0, 0, 0.22);
-  border-radius: 2.4375rem;
+  border-radius: 0.5rem;
   flex-shrink: 0;
   font-family: 'Montserrat', sans-serif;
+   width: 30%;
+  height: auto;
 }
 
 .topic-container {
@@ -234,23 +259,24 @@ body {
 
 .delete-button {
   gap: 6.5rem;
-  width: 8rem;
+  width: 10rem;
   height: 3rem;
-  border-radius: 1.25rem ;
-  border: none;
+  border-radius: 11px ;
+  font-weight: 500;
+  border: 1px solid rgba(174, 174, 174, 0.66);
   display: grid;
   place-items: center;
-  background-color: #0000004a;
-  color: #ffffff;
+  background: transparent;
+  color: rgba(0, 0, 0, 0.47);
   font-family: 'Montserrat', sans-serif;
-  font-size: 1rem;
+  font-size: 0.9rem;
   cursor: pointer;
   transition: 1s;
 }
 
 .delete-button:hover {
 
-  background-color: #0000007f;
+  background: rgba(174, 174, 174, 0.66);
 
 }
 
@@ -261,99 +287,7 @@ body {
 
 .option-select{ 
   width: 500px;
-}
-
-
-
-
-  @media only screen and (max-width: 420px) {
-
-    #todo-container {
-        margin: 20px 0;
-        display: grid;
-        place-items: center;
-      }
-
-      .modal-content {
-        display: grid;
-        gap: 1rem;
-        background-color: #fefefe;
-        margin: 15% auto;
-        padding: 20px;
-        width: 300px;
-        height: 60%;
-        padding: 3rem auto;
-      }
-    
-      .title-modal{ 
-        font-size: 30px;
-        margin-left: 1.5rem;
-        font-weight: 400;
-        text-align: left;
-        height: inherit;
-      }
-
-
-
-      #topic-select:focus{ 
-     
-      }
-      .select-section select {
-        background: url(assets/img/add-main-icon.png) no-repeat transparent;
-        
-        /* Imagem de fundo (Seta) */
-        background-position: 90% center;
-        /*Posição da imagem do background*/
-        width: 270px;
-        /* Tamanho do select, maior que o tamanho da div "div-select" */
-        height: 80px;
-        /* altura do select, importante para que tenha a mesma altura em todo os navegadores */
-        font-family: Arial, Helvetica, sans-serif;
-        /* Fonte do Select */
-        font-size: 18px;
-        /* Tamanho da Fonte *
-        /* Configurações de padding para posicionar o texto no campo */
-        color: #000000;
-        /* Cor da Fonte */
-        text-indent: 0.01px;
-        /* Remove seta padrão do FireFox */
-        text-overflow: "";
-    }
-    
-    /* Remove seta padrão do FireFox */
-    .select-section select::-ms-expand {
-        display: none;
-    }
-    /* Remove seta padrão do IE*/
-
-
-    .todo-item {
-     margin: 4rem 1rem;
-      padding: 3rem;
-
-   
-
-  }
-
-  #add-button{ 
-    position: fixed ;
-    bottom: 1.5rem;
-    opacity: 100%;
-  }
-
-  #todo-container{
-    width: 100%;
-    height: 3.5rem; 
-    margin: 0;
-    bottom: 0;
-    position: fixed;
-    background-color: #fff;
-    border-top-right-radius: 100px;
-    border-top-left-radius: 100px;
-  }
-
-}
-  
+}  
 
 
 .nice-select {

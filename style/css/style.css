@@ -98,4 +98,28 @@ transition: 500ms;
     color: #FF9F2E;
 }
 
+@media only screen and (max-width: 420px) { 
 
+main{ 
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-direction: column;
+}
+
+.btn-main{ 
+    width: 100%;
+}
+
+.btn{ 
+    width: 100%;
+    font-size: 0.9rem;
+}
+
+.sub-main{ 
+    width: 100%;
+    font-size: 1rem;
+}
+
+}

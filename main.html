@@ -5,6 +5,7 @@
   <link rel="stylesheet" type="text/css" href="style/css/main-style.css">
   <link rel="stylesheet" href="style/grid/main-grid.css">
   <link rel="stylesheet" href="style/css/style.css">
+  <link rel="stylesheet" href="style/css/mobile.css">
   <link href="https://api.fontshare.com/v2/css?f[]=clash-display@200,400,700,500,600,300&display=swap"
       rel="stylesheet">
 </head>
@@ -13,9 +14,11 @@
     <a href="index.html">
     <img class="todo-icon" src="assets/img/To do.png" width="70px" alt="" style="margin-top: 3rem;">
   </a>
-  <div id="todo-container">
-    <button id="add-button"><img src="assets/img/add-main-icon.png"" alt=""></button>
-  </div>
+</div>
+<div id="todo-container">
+  <div class="todo-container-inner">
+  <button id="add-button"><img src="assets/img/add-main-icon.png" style="    width: 50px;" alt=""><span class="add-main-icon-text">Adicione uma tarefa!</span></button>
+</div>
 </div>
     <main class="main">
     <div id="topic-modal" class="modal">
@@ -24,9 +27,9 @@
         <p class="title-modal">Selecione o <br><strong>tópico</strong></p>
         <div class="select-section">
         <select id="topic-select">
-          <option class="option-select" value="planos">Planos</option>
-          <option class="option-select" value="trabalho">Trabalho</option>
-          <option class="option-select" value="afazeres">A Fazeres</option>
+          <option class="option-select" value="Planos">Planos</option>
+          <option class="option-select" value="Trabalho">Trabalho</option>
+          <option class="option-select" value="Fazeres">A Fazeres</option>
         </select>
     </div>
         <input type="text" id="todo-input" placeholder="Digite uma tarefa">
